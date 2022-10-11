@@ -1,18 +1,82 @@
-# Vue3-Template-Imagemin
-集合vue3+Vite+图片压缩系统 避免重复图片压缩
+<p align="center">
+  <a href="http://hxgis.com/">
+    <img width="300px" src="https://hxgit.hxgis.com/uploads/-/system/appearance/header_logo/1/logo.png">
+  </a>
+</p>
 
-# 安装
+- 💪 Vue 3 Composition API
+- 🔥 Written in TypeScript
 
-yarn (建议使用 -- 🧱 imagemin很难下载)
+# Vue 3 + Typescript + Vite
 
-npm install
+<span style="display: inline-block;padding: 2px 1px; border-radius: 3px 0 0 3px; color: #fff; background: #606060; font-weight: bold">Vue3</span><span></span><span style="display: inline-block;padding: 2px 1px; border-radius: 0 3px 3px 0; color: #fff; background: #42c02e; font-weight: bold">3.2.37</span><span></span>
+<span style="display: inline-block;padding: 2px 1px; border-radius: 3px 0 0 3px; color: #fff; background: #606060; font-weight: bold">TypeScript</span><span></span><span style="display: inline-block;padding: 2px 1px; border-radius: 0 3px 3px 0; color: #fff; background: #42c02e; font-weight: bold">4.4.3</span><span></span>
+<span style="display: inline-block;padding: 2px 1px; border-radius: 3px 0 0 3px; color: #fff; background: #606060; font-weight: bold">Vite</span><span></span><span style="display: inline-block;padding: 2px 1px; border-radius: 0 3px 3px 0; color: #fff; background: #42c02e; font-weight: bold">3.0.7</span><span></span>
 
-# 打包📦
+# 项目说明 <span style="color: #F43D7A">*</span>
 
-yarn build:imagemin  or  npm run build:imagemin
+- 项目名称👇
 
-## 图片压缩
 
-imagemin.mjs --> imagemin.map.json
+- 启动时间👇
 
-压缩脚本    -->   图片记录目录
+
+- 开发人员👇
+
+    - 项目经理
+
+    - 前端
+
+    - 后端
+
+
+- swagger 地址👇
+
+
+- 线上地址👇
+
+
+- jenkins 地址👇
+
+
+## router.ts👇
+
+```typescript
+/**
+ * If PatternType === 'Business'（can not find PatternType? see here⬆️）
+ * You will see the routing rules
+ * The backstage is xuyan configured
+ * If you have something special
+ * Please modify manually
+ * 
+ * 
+ * Note: sub-menu only appear when route children.length >= 1
+ *
+ * hidden: true                   if set true, item will not show in the sidebar(default is false)
+ * alwaysShow: true               if set true, will always show the root menu
+ *                                if not set alwaysShow, when item has more than one children route,
+ *                                it will becomes nested mode, otherwise not show the root menu
+ * redirect: noRedirect           if set noRedirect will no redirect in the breadcrumb
+ * name:'router-name'             the name is used by <keep-alive> (must set!!!)
+ * meta : {
+    roles: ['admin','editor']    control the page roles (you can set multiple roles)
+    title: 'title'               the name show in sidebar and breadcrumb (recommend set)
+    icon: 'svg-name'             the icon show in the sidebar
+    noCache: true                if set true, the page will no be cached(default is false)
+    affix: true                  if set true, the tag will affix in the tags-view
+    breadcrumb: false            if set false, the item will hidden in breadcrumb(default is true)
+    activeMenu: '/example/list'  if set path, the sidebar will highlight the path you set
+  }
+ */
+```
+- `constantRoutes` 固定路由
+- `localAsyncRoutes` 本地异步路由
+- `routeList` 自己配置的路由
+
+
+## 华信联创知识库👇
+
+- [华信知识库](http://wiki.hxgis.com/)
+- [前端代码规范](http://wiki.hxgis.com/zh/public/docs/web-development-guide)
+- [前端项目目录结构手册](http://wiki.hxgis.com/zh/public/docs/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E)
+- [前端工程格式化标准](http://wiki.hxgis.com/zh/public/docs/front)

@@ -1,7 +1,9 @@
+/** @type {import('vite').UserConfig} */
 import { defineConfig, loadEnv, UserConfigExport, ConfigEnv } from 'vite'
 import { join } from 'path'
 import vue from '@vitejs/plugin-vue'
 import viteCompression from 'vite-plugin-compression'
+import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 
 function resolve(dir: string) {
   return join(__dirname, dir)
@@ -12,8 +14,8 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
     server: {
       host: '0.0.0.0',
       proxy: {
-        [`${loadEnv(mode, process.cwd()).VITE_APP_BASE_API}`]: {
-          target: loadEnv(mode, process.cwd()).VITE_TEST_HOST, // 线上
+        '/api': {
+          target: 'target path', // 线上
           // rewrite: (path:any) => path.replace(/^\/api/, ''),
           changeOrigin: true,
           ws: true
@@ -22,6 +24,7 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
     },
     plugins: [
       vue(),
+      vueSetupExtend(),
       viteCompression({
         ext: '.gz',
         algorithm: 'gzip',
@@ -35,7 +38,6 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
     build: {
       target: 'es2015',
       outDir: 'dist'
-      // assetsDir: 'assets'
     }
   })
 }
