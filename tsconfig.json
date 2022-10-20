@@ -10,6 +10,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["vite/client", "node"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -38,6 +39,7 @@
   ],
   "include": [
     "src",
-    "typed-css.d.ts"//配置的.d.ts文件
+    "image.d.ts",//配置的.d.ts文件
+    "env.d.ts"
   ]
 }
